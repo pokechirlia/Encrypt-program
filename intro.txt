@@ -1,2 +1,9 @@
-hello
-how are you
+---------------------------------------------------------------------
+Welcome to my encryption program app!
+
+Here are the options: 
+1. Classical cryptography
+2. ?
+3. ?
+
+Your option: 
