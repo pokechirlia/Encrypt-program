@@ -25,7 +25,7 @@ int main()
         switch (option[0])
         {
         case '1':
-            cout << "You just picked " << option << endl;
+            classical_crypt();
             break;
         default:
             cout << "Invalid input" << endl;
@@ -38,6 +38,38 @@ int main()
     return 0;
 }
 
+void classical_crypt()
+{
+    Classical obj;
+    print_message("classical_intro.txt");
+
+    string option;
+    cin >> option;
+
+    while (option.compare("0"))
+    {
+        if (option.length() > 1)
+        {
+            cout << "Invalid input" << endl;
+            print_message("classical_intro.txt");
+            cin >> option;
+            continue;
+        }
+
+        switch (option[0])
+        {
+        case '1':
+            obj.shiftCipher();
+            break;
+        default:
+            cout << "Invalid input" << endl;
+        }
+
+        print_message("classical_intro.txt");
+        cin >> option;
+    }
+}
+
 void print_message(string fileName)
 {
     ifstream file(fileName);
@@ -47,9 +79,4 @@ void print_message(string fileName)
     {
         cout << line << endl;
     }
-}
-
-void classical_crypt()
-{
-    cout << "?" << endl;
 }

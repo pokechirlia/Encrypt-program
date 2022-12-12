@@ -1,0 +1,10 @@
+=====> You have picked classical cryptography
+There are 3 main techniques in classical cryptography.
+
+Please choose 1 of the following:
+1. Shift cipher
+2. Substitution cipher
+3. Transposition cipher
+0. Exit
+
+Your option: 
