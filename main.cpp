@@ -10,15 +10,15 @@ int main()
     print_message("intro.txt");
 
     string option;
-    cin >> option;
+    getline(cin, option);
 
     while (option.compare("0"))
     {
         if (option.length() > 1)
         {
             cout << "Invalid input" << endl;
-            print_message("intro.txt");
-            cin >> option;
+            cout << "Please enter your option again: " << endl;
+            getline(cin, option);
             continue;
         }
 
@@ -29,10 +29,13 @@ int main()
             break;
         default:
             cout << "Invalid input" << endl;
+            cout << "Please enter your option again: " << endl;
+            getline(cin, option);
+            continue;
         }
 
         print_message("intro.txt");
-        cin >> option;
+        getline(cin, option);
     }
 
     return 0;
@@ -44,15 +47,15 @@ void classical_crypt()
     print_message("classical_intro.txt");
 
     string option;
-    cin >> option;
+    getline(cin, option);
 
     while (option.compare("0"))
     {
         if (option.length() > 1)
         {
             cout << "Invalid input" << endl;
-            print_message("classical_intro.txt");
-            cin >> option;
+            cout << "Please enter your option again: " << endl;
+            getline(cin, option);
             continue;
         }
 
@@ -63,10 +66,13 @@ void classical_crypt()
             break;
         default:
             cout << "Invalid input" << endl;
+            cout << "Please enter your option again: " << endl;
+            getline(cin, option);
+            continue;
         }
 
         print_message("classical_intro.txt");
-        cin >> option;
+        getline(cin, option);
     }
 }
 

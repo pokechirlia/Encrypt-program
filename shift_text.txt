@@ -1,0 +1,12 @@
+=====> You have picked shift cipher
+
+What is shift cipher?
+- Shift cipher is replacing letter of a message by other distinct letters a fixed distance away
+- To perform this encryption/decryption, you need a message and a key (a number)
+
+Do you want to:
+1. Encrypt
+2. Decrypt
+0. Back
+
+Your option:

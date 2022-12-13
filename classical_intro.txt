@@ -5,6 +5,6 @@ Please choose 1 of the following:
 1. Shift cipher
 2. Substitution cipher
 3. Transposition cipher
-0. Exit
+0. Back
 
 Your option: 
