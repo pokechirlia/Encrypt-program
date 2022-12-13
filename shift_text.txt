@@ -1,4 +1,5 @@
-=====> You have picked shift cipher
+
+=====> This is the Shift Cipher menu
 
 What is shift cipher?
 - Shift cipher is replacing letter of a message by other distinct letters a fixed distance away

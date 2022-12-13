@@ -1,4 +1,5 @@
-=====> You have picked classical cryptography
+
+=====> This is the Classical Cryptography menu
 There are 3 main techniques in classical cryptography.
 
 Please choose 1 of the following:

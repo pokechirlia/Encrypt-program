@@ -9,6 +9,7 @@ public:
 
 private:
     std::string shiftEncrypt(std::string &message, int key);
+    std::string shiftDecrypt(std::string &message, int key);
 };
 
 void print_message(std::string file);
