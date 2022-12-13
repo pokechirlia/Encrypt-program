@@ -14,7 +14,7 @@ int main()
 
     while (option.compare("0"))
     {
-        if (option.length() > 1)
+        if (!isNumber(option))
         {
             cout << "Invalid input" << endl;
             cout << "Please enter your option again: " << endl;
@@ -22,9 +22,9 @@ int main()
             continue;
         }
 
-        switch (option[0])
+        switch (stoi(option))
         {
-        case '1':
+        case 1:
             classical_crypt();
             break;
         default:
@@ -51,7 +51,7 @@ void classical_crypt()
 
     while (option.compare("0"))
     {
-        if (option.length() > 1)
+        if (!isNumber(option))
         {
             cout << "Invalid input" << endl;
             cout << "Please enter your option again: " << endl;
@@ -59,9 +59,9 @@ void classical_crypt()
             continue;
         }
 
-        switch (option[0])
+        switch (stoi(option))
         {
-        case '1':
+        case 1:
             obj.shiftCipher();
             break;
         default:

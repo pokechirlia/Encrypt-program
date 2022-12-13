@@ -6,7 +6,9 @@ class Classical
 public:
     Classical();
     void shiftCipher();
-    void shiftEncrypt();
+
+private:
+    std::string shiftEncrypt(std::string &message, int key);
 };
 
 void print_message(std::string file);
