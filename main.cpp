@@ -86,3 +86,13 @@ void print_message(string fileName)
         cout << line << endl;
     }
 }
+
+bool isNumber(const string &s)
+{
+    for (char const &ch : s)
+    {
+        if (std::isdigit(ch) == 0)
+            return false;
+    }
+    return true;
+}

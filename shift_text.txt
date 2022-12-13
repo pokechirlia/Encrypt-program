@@ -9,4 +9,4 @@ Do you want to:
 2. Decrypt
 0. Back
 
-Your option:
+Please enter your message/ciphertext, the key and your option.
