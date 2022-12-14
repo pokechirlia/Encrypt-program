@@ -64,6 +64,11 @@ void classical_crypt()
         case 1:
             obj.shiftCipher();
             break;
+
+        case 2:
+            obj.substitutionCipher();
+            break;
+
         default:
             cout << "Invalid input" << endl;
             cout << "Please enter your option again: " << endl;

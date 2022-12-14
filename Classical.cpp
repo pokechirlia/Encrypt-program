@@ -6,6 +6,11 @@ Classical::Classical()
 {
 }
 
+void Classical::substitutionCipher()
+{
+    print_message("substitution_text.txt");
+}
+
 void Classical::shiftCipher()
 {
     print_message("shift_text.txt");

@@ -1,0 +1,13 @@
+
+=====> This is the Substitution Cipher menu
+
+What is substitution cipher?
+- Substitution cipher is replacing letter of a message by other distinct letters by a defined by other group of symbols
+- To perform this encryption/decryption, you need a message and a key (a string to replace the alphabet string - needs at least 26 characters)
+
+Do you want to:
+1. Encrypt
+2. Decrypt
+0. Back
+
+Please enter your message/ciphertext, the key and your option.

@@ -6,6 +6,7 @@ class Classical
 public:
     Classical();
     void shiftCipher();
+    void substitutionCipher();
 
 private:
     std::string shiftEncrypt(std::string &message, int key);
