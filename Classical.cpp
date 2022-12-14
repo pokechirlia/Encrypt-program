@@ -17,27 +17,27 @@ void Classical::shiftCipher()
 
     std::string message, key, option;
 
-    std::cout << "Enter your message/ciphertext: ";
-    std::getline(std::cin, message);
-    std::cout << "Enter your key: ";
-    std::getline(std::cin, key);
     std::cout << "Enter your option: ";
     std::getline(std::cin, option);
 
     while (option.compare("0"))
     {
 
-        if (!isNumber(key))
-        {
-            std::cout << "Invalid key - Enter your key again: ";
-            std::getline(std::cin, key);
-            continue;
-        }
-
         if (!isNumber(option))
         {
             std::cout << "Invalid option - Enter your option again: ";
             std::getline(std::cin, option);
+            continue;
+        }
+
+        std::cout << "Enter your message/ciphertext: ";
+        std::getline(std::cin, message);
+        std::cout << "Enter your key: ";
+        std::getline(std::cin, key);
+
+        if (!isNumber(key))
+        {
+            std::cout << "Invalid key -  ";
             continue;
         }
 
