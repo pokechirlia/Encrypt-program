@@ -1,6 +1,7 @@
 #include <iostream>
 #include <unistd.h>
 #include "encrypt.h"
+#include <map>
 
 Classical::Classical()
 {
@@ -39,7 +40,7 @@ void Classical::substitutionCipher()
         switch (stoi(option))
         {
         case 1:
-            std::cout << "Encrypted!!! Your ciphertext is: " << std::endl;
+            std::cout << "Encrypted!!! Your ciphertext is: " << substitutionEncrypt(message, key) << std::endl;
             sleep(5);
             break;
         case 2:
@@ -61,11 +62,19 @@ void Classical::substitutionCipher()
 
 std::string Classical::substitutionEncrypt(std::string &message, std::string &key)
 {
+
+    std::string alphabet = "abcdefghijklmnopqrstuv";
+    std::map<char, char> keyMap;
+    for (int i = 0; i < 26; i++)
+    {
+        keyMap[alphabet[i]] = key[i];
+    }
+
     std::string ciphertext = "";
     for (char ch : message)
     {
 
-        ciphertext += ch;
+        ciphertext += keyMap[tolower(ch)];
     }
 
     return ciphertext;
