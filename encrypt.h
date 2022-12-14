@@ -11,6 +11,7 @@ public:
 private:
     std::string shiftEncrypt(std::string &message, int key);
     std::string shiftDecrypt(std::string &message, int key);
+    std::string substitutionEncrypt(std::string &message, std::string &key);
 };
 
 void print_message(std::string file);
