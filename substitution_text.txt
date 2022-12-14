@@ -4,6 +4,8 @@
 What is substitution cipher?
 - Substitution cipher is replacing letter of a message by other distinct letters by a defined by other group of symbols
 - To perform this encryption/decryption, you need a message and a key (a string to replace the alphabet string - needs at least 26 characters)
+- If your key has less than 26 characters, the encryption/decryption will still run, but the results may not be correct
+- If the key has more than 26 characters, it will be considered as invalid key
 
 Do you want to:
 1. Encrypt

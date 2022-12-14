@@ -1,4 +1,5 @@
 #include <string>
+#include <map>
 class Classical;
 
 class Classical
@@ -11,7 +12,11 @@ public:
 private:
     std::string shiftEncrypt(std::string &message, int key);
     std::string shiftDecrypt(std::string &message, int key);
-    std::string substitutionEncrypt(std::string &message, std::string &key);
+<<<<<<< HEAD
+    std::string substitutionEncrypt(std::string &message, std::map<char, char> &keyMap);
+    std::string substitutionDecrypt(std::string &message, std::map<char, char> &keyMap);
+=======
+>>>>>>> parent of a09c954 (set up substitution encrypt)
 };
 
 void print_message(std::string file);
