@@ -12,11 +12,8 @@ public:
 private:
     std::string shiftEncrypt(std::string &message, int key);
     std::string shiftDecrypt(std::string &message, int key);
-<<<<<<< HEAD
-    std::string substitutionEncrypt(std::string &message, std::map<char, char> &keyMap);
-    std::string substitutionDecrypt(std::string &message, std::map<char, char> &keyMap);
-=======
->>>>>>> parent of a09c954 (set up substitution encrypt)
+    std::string substitutionEncrypt(std::string &message, std::string &key);
+    std::string substitutionDecrypt(std::string &message, std::string &key);
 };
 
 void print_message(std::string file);

@@ -11,12 +11,6 @@ void Classical::substitutionCipher()
     print_message("substitution_text.txt");
 
     std::string message, key, option;
-    std::string alphabet = "abcdefghijklmnopqrstuv";
-    std::map<char, char> keyMap;
-    for (int i = 0; i < 26; i++)
-    {
-        keyMap[alphabet[i]] = alphabet[i];
-    }
 
     std::cout << "Enter your option: ";
     std::getline(std::cin, option);
@@ -36,25 +30,20 @@ void Classical::substitutionCipher()
         std::cout << "Enter your key: ";
         std::getline(std::cin, key);
 
-        if (key.length() > 26)
+        if (key.length() != 26)
         {
             std::cout << "Invalid key -  ";
             continue;
         }
 
-        for (int i = 0; i < key.length(); i++)
-        {
-            keyMap[alphabet[i]] = key[i];
-        }
-
         switch (stoi(option))
         {
         case 1:
-            std::cout << "Encrypted!!! Your ciphertext is: " << std::endl;
+            std::cout << "Encrypted!!! Your ciphertext is: " << substitutionEncrypt(message, key) << std::endl;
             sleep(5);
             break;
         case 2:
-            std::cout << "Decrypted!!! Your message is: " << substitutionDecrypt(message, keyMap) << std::endl;
+            std::cout << "Decrypted!!! Your message is: " << substitutionDecrypt(message, key) << std::endl;
             sleep(5);
             break;
         default:
@@ -70,15 +59,38 @@ void Classical::substitutionCipher()
     }
 }
 
-std::string Classical::substitutionEncrypt(std::string &message, std::map<char, char> &keyMap)
+std::string Classical::substitutionEncrypt(std::string &message, std::string &key)
 {
+    std::string alphabet = "abcdefghijklmnopqrstuv";
+    std::map<char, char> keyMap;
+    for (int i = 0; i < 26; i++)
+    {
+        keyMap[alphabet[i]] = key[i];
+    }
+
     std::string ciphertext = "";
     for (char ch : message)
     {
         ciphertext += keyMap[tolower(ch)];
     }
 
-    ciphertext += ch;
+    return ciphertext;
+}
+
+std::string Classical::substitutionDecrypt(std::string &message, std::string &key)
+{
+    std::string alphabet = "abcdefghijklmnopqrstuv";
+    std::map<char, char> keyMap;
+    for (int i = 0; i < 26; i++)
+    {
+        keyMap[key[i]] = alphabet[i];
+    }
+
+    std::string ciphertext = "";
+    for (char ch : message)
+    {
+        ciphertext += keyMap[tolower(ch)];
+    }
 
     return ciphertext;
 }
