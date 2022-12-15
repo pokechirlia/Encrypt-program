@@ -6,6 +6,59 @@ Classical::Classical()
 {
 }
 
+void Classical::transpositionCipher()
+{
+    print_message("transposition_text.txt");
+
+    std::string message, key, option;
+
+    std::cout << "Enter your option: ";
+    std::getline(std::cin, option);
+
+    while (option.compare("0"))
+    {
+
+        if (!isNumber(option))
+        {
+            std::cout << "Invalid option - Enter your option again: ";
+            std::getline(std::cin, option);
+            continue;
+        }
+
+        std::cout << "Enter your message/ciphertext: ";
+        std::getline(std::cin, message);
+        std::cout << "Enter your key: ";
+        std::getline(std::cin, key);
+
+        if (key.length() != 26)
+        {
+            std::cout << "Invalid key -  ";
+            continue;
+        }
+
+        switch (stoi(option))
+        {
+        case 1:
+            // std::cout << "Encrypted!!! Your ciphertext is: " << substitutionEncrypt(message, key) << std::endl;
+            sleep(5);
+            break;
+        case 2:
+            // std::cout << "Decrypted!!! Your message is: " << substitutionDecrypt(message, key) << std::endl;
+            sleep(5);
+            break;
+        default:
+            std::cout << "Invalid option - Enter your option again: ";
+            std::getline(std::cin, option);
+            continue;
+        }
+
+        print_message("shift_text.txt");
+
+        std::cout << "Enter your option: ";
+        std::getline(std::cin, option);
+    }
+}
+
 void Classical::substitutionCipher()
 {
     print_message("substitution_text.txt");

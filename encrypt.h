@@ -8,6 +8,7 @@ public:
     Classical();
     void shiftCipher();
     void substitutionCipher();
+    void transpositionCipher();
 
 private:
     std::string shiftEncrypt(std::string &message, int key);

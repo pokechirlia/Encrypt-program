@@ -1,0 +1,13 @@
+
+=====> This is the Transposition Cipher menu
+
+What is transposition cipher?
+- Transposition cipher is reorgnize the positions of characters without changing the characters, using the key to set up the new positions.
+- The key should consist of 
+
+Do you want to:
+1. Encrypt
+2. Decrypt
+0. Back
+
+Please enter your message/ciphertext, the key and your option.
