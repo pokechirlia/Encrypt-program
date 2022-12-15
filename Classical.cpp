@@ -30,11 +30,7 @@ void Classical::transpositionCipher()
         std::cout << "Enter your key: ";
         std::getline(std::cin, key);
 
-        if (key.length() != 26)
-        {
-            std::cout << "Invalid key -  ";
-            continue;
-        }
+        convertKeyToOrder(key);
 
         switch (stoi(option))
         {
@@ -57,6 +53,28 @@ void Classical::transpositionCipher()
         std::cout << "Enter your option: ";
         std::getline(std::cin, option);
     }
+}
+
+void Classical::convertKeyToOrder(std::string &key)
+{
+    std::string newKey = key, newOrder;
+    std::sort(newKey.begin(), newKey.end());
+    for (int i = 0; i < newKey.length(); i++)
+    {
+        if (i > 0)
+        {
+            if (newKey[i] == newKey[i - 1])
+            {
+                newKey.erase(i--, 1);
+                continue;
+            }
+        }
+
+        // newKey[i] = key.find(newKey[i]);
+        newOrder += std::to_string(key.find(newKey[i]));
+    }
+
+    std::cout << "ayooo" << key << " and " << newOrder << std::endl;
 }
 
 void Classical::substitutionCipher()
